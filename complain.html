@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Team Rocket Meeting Minutes</title>
+    <meta charset="utf-8"/>
+    <meta name="author" content="Alex Tahan" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+    <link rel="manifest" href="media/site.webmanifest">
+  </head>
+  <body>
+    <header>
+        <img src="media/android-chrome-192x192.png" alt="Team Rocket Logo">
+        <h1>Team Rocket!</h1>
+        <h2>Blasting off to new heights!</h2>
+    </header>
+    <hr />
+    <nav>
+        <h3>Menu</h3>
+        <ul>
+            <li><details>
+                <summary><a href="index.html"><b>Meeting Minutes Home</b></a></summary>
+                Note: Meetings in italics have not occured yet.</details>
+            </li>
+            <ol>
+                <li><a href="meeting1.html">Meeting 1</a></li>
+                <li><i>Meeting 2</i></li>
+                <li><i>Meeting 3</i></li>
+                <li><i>Meeting 4</i></li>
+            </ol>
+            <li><a href="complain.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <hr />
+    <main>
+        <h2>Contact Us</h2>
+        <section>
+            <h3>Contact Us Form</h3>
+            <p>You want to complain?!? Well, <em>prepare for trouble,</em><strong> and make it double!</strong></p>
+            <span>
+                <form id="complain">
+                    <fieldset>
+                        <legend>General Info</legend>
+
+                        <label for="name">Name</label>
+                        <input type="text" id="name"><br />
+                        
+                        <label for="email">Email</label>
+                        <input type="email" id="email"><br />
+
+                        <label for="date">Date Occured</label>
+                        <input type="date" id="date"><br />
+
+                        <label for="school">School: </label>
+                        <input list="schools" id="school"><br />
+
+                        <datalist id="schools">
+                            <option value="UC San Diego"></option>
+                            <option value="UC Santa Barbara"></option>
+                            <option value="UC Santa Cruz"></option>
+                            <option value="UC Los Angeles"></option>
+                            <option value="UC Berkeley"></option>
+                            <option value="UC Irvine"></option>
+                            <option value="UC Riverside"></option>
+                            <option value="UC Merced"></option>
+                        </datalist>
+
+                        <label for="reason">Reason: </label>
+                        <select id="reason">
+                            <option value="">--Choose a reason--</option>
+                            <option value="suggestion">Suggestion</option>
+                            <option value="Complaint">Complaint</option>
+                            <option value="Praise">Praise</option>
+                            <option value="Fan Mail">Fan Mail</option>
+                        </select>
+                        
+                    </fieldset>
+                    <fieldset>
+                        <legend>Who is the complaint about?</legend>
+
+                        <input type="checkbox" name="jessie">
+                        <label>Jessie</label><br />
+
+                        <input type="checkbox" name="james">
+                        <label>James</label><br />
+                        
+                        <input type="checkbox" name="meowth">
+                        <label>Meowth</label><br />
+                        
+                        <input type="checkbox" name="other">
+                        <label>Other</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Issue</legend>
+                        <label for="issue">Describe your issue below:</label><br />
+                        <textarea id="issue" rows="5" cols="64"></textarea>
+                    </fieldset>
+
+                    <input type="radio" required>
+                    <label>I agree to the terms and conditions.</label><br />
+
+                    <button type="submit" form="complain">Submit</button>
+                </form>
+            </span>
+        </section>
+    </main>
+    <footer>
+        <hr />
+        Members:
+        <ul>
+            <li>Jessie</li>
+            <li>James</li>
+            <li>Meowth</li>
+        </ul>
+        <a href="complain.html">File a complaint</a>
+        <p>© 2023 Team Rocket Inc. All rights reserved. </p>
+    </footer>
+  </body>
+</html>
