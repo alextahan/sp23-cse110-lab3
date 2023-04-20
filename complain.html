@@ -1,71 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Team Rocket Meeting Minutes</title>
-        <meta charset="utf-8">
-        <meta name="author" content="Alex Tahan">
-    
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
-    
-        <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
-        <link rel="manifest" href="media/site.webmanifest">
+  <head>
+    <title>Team Rocket Meeting Minutes</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Alex Tahan">
 
-        <style>
-            form {
-                background-color: lightcoral;
-                width: min-content;
-                padding: 10px;
-                border-radius: 20px;
-                border-style: double;
-                border-width: 0.5em;
-                border-color: blueviolet;
-                position: relative;
-                left: 50px;
-                margin-bottom: 50px;
-    
-            }
-        </style>
-    </head>
-    <body>
-        <header class="container">
-            <a href="index.html"><img src="media/android-chrome-192x192.png" alt="Team Rocket Logo"></a>
-            <h1 class="font-effect-fire">Team Rocket!</h1>
-            <h2 class="item2">Blasting off to new heights!</h2>
-        </header>
-        <nav class="container">
-            <h3>Menu</h3>
-            <a href="index.html"><p class="nav">Home</p></a>
-            <details class="nav">
-                    <summary><b>Meeting Minutes</b></summary>
-                    
-                    <a href="meeting1.html"><p>Meeting 1</p></a>
-                    <p><i>Meeting 2</i></p>
-                    <p><i>Meeting 3</i></p>
-                    <p><i>Meeting 4</i></p>
-                    
-    
-                    <i>Note: Meetings in italics have not occurred yet.</i>
-            </details>
-            <a href="complain.html"><p class="nav">Contact Us</p></a>
-        </nav>
+    <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+    <link rel="manifest" href="media/site.webmanifest">
+  </head>
+  <body>
+    <header>
+        <img src="media/android-chrome-192x192.png" alt="Team Rocket Logo">
+        <h1>Team Rocket!</h1>
+        <h2>Blasting off to new heights!</h2>
+    </header>
+    <hr>
+    <nav>
+        <h3>Menu</h3>
+        <ul>
+            <li><details>
+                <summary><a href="index.html"><b>Meeting Minutes Home</b></a></summary>
+                Note: Meetings in italics have not occurred yet.</details>
+            <ol>
+                <li><a href="meeting1.html">Meeting 1</a></li>
+                <li><i>Meeting 2</i></li>
+                <li><i>Meeting 3</i></li>
+                <li><i>Meeting 4</i></li>
+            </ol></li>
+            <li><a href="complain.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <hr>
     <main>
-        <h2 class="page-title">Contact Us</h2>
+        <h2>Contact Us</h2>
         <section>
             <h3>Contact Us Form</h3>
-            <p style="color:rgb(255, 0, 0)">You want to complain?!? Well, <em>prepare for trouble,</em><strong> and make it double!</strong></p>
-            <p>Fields in purple are required.</p>
+            <p>You want to complain?!? Well, <em>prepare for trouble,</em><strong> and make it double!</strong></p>
             <form id="complain">
                 <fieldset>
                     <legend>General Info</legend>
 
                     <label for="name">Name</label>
-                    <input type="text" id="name" required><br>
+                    <input type="text" id="name"><br>
                     
                     <label for="email">Email</label>
-                    <input type="email" id="email" required><br>
+                    <input type="email" id="email"><br>
 
                     <label for="date">Date Occured</label>
                     <input type="date" id="date"><br>
@@ -82,7 +63,6 @@
                         <option value="UC Irvine"></option>
                         <option value="UC Riverside"></option>
                         <option value="UC Merced"></option>
-                        <option value="UC Davis"></option>
                     </datalist>
 
                     <label for="reason">Reason: </label>
@@ -108,26 +88,19 @@
                     <label>Meowth</label><br>
                     
                     <input type="checkbox" name="other">
-                    <label>Other</label><br>
+                    <label>Other</label>
                 </fieldset>
 
                 <fieldset>
                     <legend>Issue</legend>
                     <label for="issue">Describe your issue below:</label><br>
-                    <textarea id="issue" rows="5" cols="64" required></textarea>
+                    <textarea id="issue" rows="5" cols="64"></textarea>
                 </fieldset>
 
-                <div id="terms">
-                    <input type="radio" required>
-                    <label>I agree to the terms and conditions. (required) </label><br>
-                </div>
+                <input type="radio" required>
+                <label>I agree to the terms and conditions.</label><br>
 
-
-                <span id="buttons">
-                    <p>Submit if you dare!</p>
-                    <button type="submit" form="complain" id="submit">Submit</button>
-                    <a href="complain.html">Cancel</a>
-                </span>
+                <button type="submit" form="complain">Submit</button>
             </form>
         </section>
     </main>
