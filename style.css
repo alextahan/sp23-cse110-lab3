@@ -1,0 +1,176 @@
+@font-face {
+    font-family: "fancyFont";
+    src: url(https://fonts.googleapis.com/css?family=Sofia&effect=fire);
+}
+
+/* give every container padding */
+*.container {
+    padding: 20px;
+}
+
+/* Web page has header on top, nav bar on left, main content on right, footer on bottom */
+body {
+    display: grid;
+    grid-template-columns: 250px 1fr; /* navbar is 250px wide */
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header"
+    "navbar main"
+    ". main"
+    "footer footer";
+    margin: 0;
+}
+
+/* Create header with logo on the left, and Team Rocket name and motto on the right */
+header {
+    position: static;
+    width: 100%;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    grid-template-rows: 100px 100px;
+    padding: 20px 20px 0px 20px;
+    border-bottom-width: 4px;
+    border-bottom-color: maroon;
+    border-bottom-style: inset;
+}
+
+header img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+header > .font-effect-fire {
+    grid-row: 1;
+    grid-column: 2;
+    padding-left: 20px;
+    font-size: 40px;
+}
+
+/* when clicked, change color to orange */
+.font-effect-fire:active {
+    color: orange;
+}
+
+header > .item2 {
+    grid-row: 2;
+    grid-column: 2;
+    padding-left: 20px;
+}
+
+/* 
+red navbar with rounded edges, 
+height varies based on number of items 
+*/
+nav {
+    grid-area: navbar;
+    background-color: lightcoral;
+    padding: 10px 10px 10px 20px;
+    min-height: 25em;
+    border-bottom-right-radius: 20px;
+    display: inline-block;
+}
+
+.nav p, nav p {
+    width: auto;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    margin: 2px 0px 2px 0px;
+}
+
+/* clickable items highlight when hovered over */
+.nav p:hover, nav p:hover {
+    background-color: lightgray;
+}
+
+main {
+    grid-area: main;
+    padding-left: 20px;
+    min-height: 1000px;
+}
+
+footer {
+    grid-area: footer;
+    background-color: hsla(0, 100%, 25%, 0.745);
+    color: whitesmoke;
+    padding: 20px;
+    border-top: 1rem groove maroon;
+}
+
+/* all required form items are highlighted purple */
+[required] {
+    background-color: rgb(241, 80, 214);
+}
+
+/* margins to create spacing after every input in the form */
+label + * {
+    margin: 1pc;
+}
+
+fieldset {
+    margin: 1cm;
+}
+
+#submit {
+    font-family: cursive;
+}
+
+/* Center and align the submit and cancel buttons */
+#buttons {
+    display: flex;
+    flex: row-reverse nowrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+}
+
+h1 {
+    font-family: "Sofia", Impact, sans-serif;
+}
+
+.page-title, h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.page-title {
+    text-decoration: wavy overline underline;
+}
+
+.page-title > section {
+    display: block;
+}
+
+/* "Meow" is hidden until screen width is small enough */
+#surprise {
+    display: none;
+}
+
+@media (max-width:700px) {
+    #surprise {
+        display: block;
+    }
+}
+
+#meowth {
+    max-width: 500px;
+    min-width: 100px;
+    position: static;
+}
+
+video {
+    height: 10em;
+}
+
+#minutes {
+    display: inline-block;
+}
+
+h2 ~ div {
+    margin-left: 20px
+}
+
+#terms {
+    width: 400px;
+    margin: auto;
+}
